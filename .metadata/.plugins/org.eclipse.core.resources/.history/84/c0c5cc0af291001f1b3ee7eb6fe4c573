@@ -1,0 +1,5 @@
+package com.CL3MEDICO.crud.controlador;
+
+public class MedicoController {
+
+}

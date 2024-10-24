@@ -1,0 +1,29 @@
+package com.CL3MEDICO.crud.controlador;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.CL3MEDICO.crud.modelo.ClassMedico;
+import com.CL3MEDICO.crud.servicio.IMedicoServicio;
+
+@Controller
+@RequestMapping("/Vistas")
+public class MedicoController {
+	//Inyeccion de depenedicas
+		@Autowired
+		private IMedicoServicio imedicoservicio;
+		@GetMapping("ListadoMedicos")
+		public String ListadoMedicos(Model modelo) {
+			//RECUPERAMOS LOS DATOS DE LA BD
+			List<ClassMedico> listado=imedicoservicio.ListadoMedico();
+			//ENVIAMOS HACIA LA VISTA
+			modelo.addAttribute("listado",listado);
+			//RETORNAMOS
+			return "/Vistas/ListadoProductos";
+			}//FIN DEL METODO LISTAR
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <title>Registro de Medicos</title>
+    <style>
+        html {
+            background-color: #c5dec9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center">Registro De Medicos</h1>
+    <form th:action="@{/VISTAS/GuardarMedico}" method="post" th:object="${regmedico}">
+        <table align="center" border="2">
+            <input type="hidden" th:field="*{IDMEDICOCL3}">
+            <tr>
+                <td>Producto</td>
+                <td><input type="text" th:field="*{NOMBRECL3}"></td>
+            </tr>
+            <tr>
+                <td>Precio</td>
+                <td><input type="text" th:field="*{APELLIDOCL3}"></td>
+            </tr>
+            <tr>
+                <td>Cantidad</td>
+                <td><input type="text" th:field="*{EMAIL}"></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td><input type="text" th:field="*{DNICL3}"></td>
+            </tr>
+            <tr>
+                <td>CodBarras</td>
+                <td><input type="text" th:field="*{ESTADOCIVILCL3}"></td>
+            </tr>
+         
+            <tr>
+                <td>Fecha Vencimiento</td>
+                <td><input type="date" th:field="*{FECHANACIMCL3}"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="RegistrarMedico">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html

@@ -1,0 +1,33 @@
+package com.CL3MEDICO.crud.modelo;
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
+import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+@Entity
+@Table(name="tbl_medicocl3")
+public class ClassMedico {
+	//Declaramos atributos
+		@Id
+		@GeneratedValue(strategy=GenerationType.IDENTITY)
+		private int IDMEDICOCL3;
+		private String NOMBRECL3;
+		private String APELLIDOCL3;
+		private String EMAIL;
+		private String 	DNICL3;
+		private String ESTADOCIVILCL3;
+		@Temporal(TemporalType.DATE)
+		@DateTimeFormat(iso=ISO.DATE)
+		private Date FECHANACIMCL3;
+		public ClassMedico() {
+			//super();
+		}
+		
+}

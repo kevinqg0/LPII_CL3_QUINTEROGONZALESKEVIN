@@ -1,0 +1,33 @@
+package com.CL3MEDICO.crud.servicio;
+
+import java.util.List;
+
+import com.CL3MEDICO.crud.modelo.ClassMedico;
+
+public class ClassMedicoServicioImp implements IMedicoServicio{
+
+	@Override
+	public void RegistrarMedico(ClassMedico clmedico) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void EliminarMedico(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<ClassMedico> ListadoMedico() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ClassMedico BuscarporId(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Registro de Medicos</title>
+    <style>
+        html {
+            background-color: #c5dec9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center"> Registro de Medicos</h1>
+    <form th:action="@{/VISTAS/GuardarMedico}" method="post" th:object="${regmedico}">
+        <table align="center" border="2">
+            <input type="hidden" th:field="*{IDMEDICOCL3}">
+            <tr>
+                <td><label for="nombre">Nombre</label></td>
+                <td><input type="text" id="nombre" th:field="*{NOMBRECL3}"></td>
+            </tr>
+            <tr>
+                <td><label for="apellido">Apellido</label></td>
+                <td><input type="text" id="apellido" th:field="*{APELLIDOCL3}"></td>
+            </tr>
+            <tr>
+                <td><label for="email">EMAIL</label></td>
+                <td><input type="text" id="email" th:field="*{EMAIL}"></td>
+            </tr>
+            <tr>
+                <td><label for="dni">DNI</label></td>
+                <td><input type="text" id="dni" th:field="*{DNICL3}"></td>
+            </tr>
+            <tr>
+                <td><label for="estadoCivil">Estado Civil</label></td>
+                <td><input type="text" id="estadoCivil" th:field="*{ESTADOCIVILCL3}"></td>
+            </tr>
+            <tr>
+                <td><label for="fechaNacimiento">Fecha Nacimiento</label></td>
+                <td><input type="date" id="fechaNacimiento" th:field="*{FECHANACIMCL3}"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Registrar Medico">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
